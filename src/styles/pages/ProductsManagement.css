@@ -1,0 +1,109 @@
+/* Products Management Page Styles */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: var(--bg-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.product-details {
+  padding: 1.25rem;
+}
+
+.product-price {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.product-description {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 2;
+  text-overflow: ellipsis;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-meta svg {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+.product-category {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+/* Forms */
+.product-form {
+  background: var(--bg-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  
+  .product-form {
+    padding: 1.5rem 1rem;
+  }
+}

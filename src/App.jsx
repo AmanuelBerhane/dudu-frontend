@@ -9,12 +9,14 @@ import ProductsManagement from "./pages/ProductsManagement.jsx";
 import OrdersManagement from "./pages/OrdersManagement.jsx";
 import UsersManagement from "./pages/UsersManagement.jsx";
 import CategoriesManagement from "./pages/CategoriesManagement.jsx";
+import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
   return (
-    <div>
-      <main>
+    <div className="app">
+      <Navbar />
+      <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
